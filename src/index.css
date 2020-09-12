@@ -25,3 +25,18 @@ code {
   padding-bottom: 0.3125rem;
   font-size: 1.25rem;
 }
+
+.pageTitle{
+  text-align: center;
+}
+
+.border-box{
+  border-radius: 15em;
+  border-color: #343a40;
+  border-style: double;
+  border-width: 1em;
+}
+
+.librarize{
+  float: right;
+}
