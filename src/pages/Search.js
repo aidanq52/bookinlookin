@@ -1,23 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container} from "react-bootstrap";
 import SearchForm from "../components/SearchForm"
 import Head from "../components/Head";
 import CardResult from "../components/CardResult";
 
+function Search(){
 
-function Search({resultsArray}){
+    const [ booksArray, setBooksArray ] = useState([])
 
-    console.log(resultsArray[0])
     return(
         <div>
             <Container >
                 <Head/>
                 <hr/>
-                <SearchForm/>
+                <SearchForm setBooksArray={setBooksArray}/>
                 <hr/>
                 <Container>
                     <h5>What do we have here...</h5>
-                    {resultsArray.map(item =><CardResult key={item.googlebookid} book={item}/>)}
+                    {booksArray.map(item =><CardResult key={item.googlebookID} book={item}/>)}
                 </Container>
             </Container>
         </div>
