@@ -1,9 +1,13 @@
 import React from "react";
 import {Card, Col, Button, Row} from "react-bootstrap";
+import API from "../utils/API";
 
 function CardResult({book}){
 
-    console.log(book)
+    function saveBook(){
+        API.addBook(book);
+    }
+ 
     return(
         <div>
             <Card>
@@ -14,7 +18,8 @@ function CardResult({book}){
                             <Card.Text>Author: {book.authors[0]}</Card.Text>
                         </Col>
                         <Col md={{span:2}}>
-                            <Button class="librarize">Librarize!</Button>
+                            <Button href={book.link}>View</Button>
+                            <Button class="librarize" onClick={saveBook}>Librarize!</Button>
                         </Col>
                     </Row>
                     <Row>
