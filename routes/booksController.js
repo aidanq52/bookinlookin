@@ -4,9 +4,9 @@ const {Book} = require("../models/book");
 
 //Add book to library
 router.post("/addBook", (req, res)=>{
-    
 
-    console.log("add book")
+    console.log("hit add books route")
+    
     // Book.create(req.body)
     //     .then(bookingDB=>{
     //         res.json(bookingDB);
