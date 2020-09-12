@@ -1,7 +1,21 @@
 import React from "react";
+import Head from "../components/Head";
+import LibraryHead from "../components/LibraryHead";
+import { Container } from "react-bootstrap";
+import CardResult from "../components/CardResult"
 
-function Saved(){
-    return <h1>No really straight up Aidan is routing</h1>
+function Saved({resultsArray}){
+    return (
+        <div>
+            <Head/>
+            <LibraryHead/>
+            <Container>
+                {resultsArray.map(item =><CardResult key={item.googlebookid} book={item}/>)}
+            </Container>
+        </div>
+
+        
+    )
 }
 
 export default Saved;
