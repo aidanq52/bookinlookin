@@ -8,10 +8,10 @@ export default{
 
         queryParams.append('key',
         //My non functional API key
-        //  "AIzaSyB_UmJRHnuyBJv1LTtyZyYaZ0wPqwt7UDk"
+         "AIzaSyB_UmJRHnuyBJv1LTtyZyYaZ0wPqwt7UDk"
         
         //anothony's functional api key
-         'AIzaSyB6m3totTNeFiBuXT2orVK3OpM6KInSNqE'
+        //  'AIzaSyB6m3totTNeFiBuXT2orVK3OpM6KInSNqE'
 
          );
 
