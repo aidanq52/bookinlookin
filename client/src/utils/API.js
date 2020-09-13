@@ -5,8 +5,8 @@ export default{
         return axios.post("/api/addBook", data);
     },
 
-    deleteBook(){
-
+    deleteBook(id){
+        return axios.delete(`/api/burnBook/${id}`)
     },
 
     getAllBooks(){

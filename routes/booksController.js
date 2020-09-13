@@ -18,9 +18,18 @@ router.post("/addBook", (req, res)=>{
 });
 
 //Remove book from Library
-// router.delete(`/delete/${id}`, (req, res)=>{
+router.delete(`/burnBook/:id`, (req, res)=>{
 
-// } )
+    console.log("hit burn book route")
+
+    Book.findByIdAndDelete(req.params.id)
+        .then(bookinDB=>{
+            res.json(bookinDB);
+        })
+        .catch(err=>{
+            res.status(401).json(err)
+        })
+} )
 
 //get all books
 router.get("/library", (req, res)=>{
@@ -28,8 +37,8 @@ router.get("/library", (req, res)=>{
     console.log("hit library route")
 
     Book.find()
-    .then(bookingDB=>{
-        res.json(bookingDB);
+    .then(bookinDB=>{
+        res.json(bookinDB);
     })
     .catch(err=>{
         res.status(401).json(err)
