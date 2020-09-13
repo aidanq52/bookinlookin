@@ -5,8 +5,9 @@ import API from "../utils/API";
 function CardResult({book}){
 
     function saveBook(){
-        API.addBook(book);
+        API.addBook(book)
     }
+
  
     return(
         <div>

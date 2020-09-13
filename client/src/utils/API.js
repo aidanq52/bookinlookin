@@ -10,6 +10,6 @@ export default{
     },
 
     getAllBooks(){
-        
+        return axios.get("/api/library");
     }
 }
