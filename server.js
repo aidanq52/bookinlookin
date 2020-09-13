@@ -17,7 +17,9 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose.connect('mongodb://localhost/bookinlookin_database',{
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 })
 
 app.use('/api', require('./routes/booksController'))
